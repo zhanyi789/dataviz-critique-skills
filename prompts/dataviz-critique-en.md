@@ -1,4 +1,4 @@
-> Version: 1.1.0
+> Version: 1.2.0
 
 ---
 name: dataviz-critique
@@ -47,7 +47,7 @@ When the user:
     ```
   - **Count verification**: If the number found differs from what the user stated, clearly report the discrepancy and ask the user to point out where the missing chart(s) are. Only proceed once the counts match.
   - If there are more than 5 charts, ask the user whether to critique all of them or only specific ones.
-  - After all critiques, add one **overall comment** summarizing the report's visualization quality as a whole.
+  - After all critiques, output a **Report Narrative Analysis** (see batch mode output format below).
 
 **When analysis is not possible**: If a chart is blurry, too low-resolution, or unreadable, tell the user directly and explain why analysis is not possible.
 
@@ -93,8 +93,36 @@ Storytelling:   X/10 — One-sentence comment
 --- Chart 2/N ---
 (same format as above)
 
-[Overall Comment]
-One sentence summarizing the overall visualization quality of this report.
+[Report Narrative Analysis]
+
+▸ Narrative Coherence Diagnosis
+  Assess whether this report's charts form a coherent narrative (Strong / Partial / Weak).
+  If weak: explain the specific reasons (e.g., disjointed perspectives, no logical progression,
+  inconsistent design language) and suggest how to rebuild it into a cohesive story.
+  Do not fabricate a narrative arc that does not exist.
+
+▸ Narrative Arc
+  If coherent: analyze how the chart sequence builds an argument (Hook → Development →
+  Conclusion) — which chart grabs attention, whether the logic moves from Quantitative
+  (How much?) → Qualitative (What kind?) → Intentional (Why does it matter?), and whether
+  the report clearly answers "So what?"
+  If not coherent: describe each chart's individual argument and explain where and why the
+  thread breaks down.
+
+▸ Visual Consistency
+  Is the design language unified across charts to support lateral reading?
+  Cover: color semantics (same category = same color?), time axis zoom (is the scope shift
+  intentional and purposeful?), annotation strategy (are outliers and key inflection points
+  labeled where they should be?).
+
+▸ One-Liner Narrative Summary
+  Summarize the report's visual storytelling in one punchy sentence — its essence or its
+  core problem.
+  Example: "By zooming out across three scales, the report compellingly reveals a structural
+  long-term shift in the emotional tone of popular music."
+
+▸ Ghost Data
+  What data is not shown that, if included, would change or deepen the story?
 ```
 
 ---

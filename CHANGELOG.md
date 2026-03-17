@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.0] - 2026-03-17
+
+### Added
+- Report Narrative Analysis block in batch mode: replaces the former one-line "Overall Comment" with a structured five-part analysis covering narrative coherence diagnosis, narrative arc, visual consistency, one-liner narrative summary, and ghost data
+- Diagnose-first principle: if narrative coherence is weak or absent, the AI diagnoses the failure rather than fabricating a story arc
+
+### Changed
+- Batch mode output: `[Overall Comment]` / `【整體評語】` upgraded to `[Report Narrative Analysis]` / `【報告敘事評析】`
+
+---
+
 ## [1.1.0] - 2026-03-16
 
 ### Added

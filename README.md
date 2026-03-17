@@ -18,7 +18,7 @@ Both versions follow the same response language rule: **reply in the user's lang
 
 ## Features
 
-- **Two modes**: single chart or batch PDF report
+- **Two modes**: single chart or batch PDF report (with cross-chart narrative analysis)
 - **Three scoring dimensions**: Visual Design / Readability / Storytelling (1–10 each)
 - **Scoring anchors**: defined rubric to prevent score inflation
 - **Bias-free scoring**: chart source (NYT, The Economist, etc.) does not affect the score
@@ -53,7 +53,12 @@ Each critique follows this structure:
 [Suggestions]            — 1–3 specific, actionable improvements
 ```
 
-For batch mode (PDF with multiple charts), each chart is critiqued in sequence, followed by an overall summary.
+For batch mode (PDF with multiple charts), each chart is critiqued in sequence, followed by a **Report Narrative Analysis** covering:
+- Narrative coherence diagnosis (Strong / Partial / Weak — with diagnosis if weak)
+- Narrative arc (Hook → Development → Conclusion, or breakdown analysis if incoherent)
+- Visual consistency across charts (color semantics, axis alignment, annotation strategy)
+- One-liner narrative summary
+- Ghost data (what's missing that would change the story)
 
 ---
 
@@ -92,7 +97,7 @@ MIT — free to use, modify, and share. See [LICENSE](LICENSE).
 
 ## 功能特色
 
-- **兩種模式**：單張圖表 / 批次 PDF 報告
+- **兩種模式**：單張圖表 / 批次 PDF 報告（含跨圖敘事評析）
 - **三維度評分**：視覺設計 / 易讀性 / 故事性（各 1–10 分）
 - **評分錨點**：有明確定義防止評分膨脹
 - **評分無偏見**：不因圖表來源（NYT、《經濟學人》等）而調整分數
@@ -127,7 +132,12 @@ MIT — free to use, modify, and share. See [LICENSE](LICENSE).
 【改善建議】   — 1–3 個具體可執行的改善方向
 ```
 
-批次模式（含多張圖的 PDF）會依序賞析每張圖，最後加上整體評語。
+批次模式（含多張圖的 PDF）會依序賞析每張圖，最後輸出**報告敘事評析**，包含：
+- 敘事連貫性診斷（強／部分／薄弱，薄弱時說明缺失原因）
+- 敘事弧線（Hook → Development → Conclusion，或不連貫時的斷點分析）
+- 視覺一致性（色彩語意、時間軸縮放、標注策略）
+- 一句話敘事摘要
+- 缺席的數據（Ghost Data）
 
 ---
 
